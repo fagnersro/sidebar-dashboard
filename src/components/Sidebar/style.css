@@ -1,0 +1,268 @@
+.container-sidebar-open {
+  animation: container-sidebar-slide-right 0.4s;
+  background: var(--green);
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 25rem;
+}
+
+.container-sidebar-open nav {
+  height: 100%;
+  width: 100%;
+}
+
+.ul-sidebar-open {
+  animation: container-sidebar-slide-right 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  list-style: none;
+
+  height: 100%;
+  width: 100%;
+}
+
+.container-sidebar-open li {
+  border-radius: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  padding-left: 1.3rem;
+
+  gap: 1.3rem;
+  height: 5rem;
+  width: 90%;
+}
+
+.container-sidebar-open li:nth-child(1) {
+  justify-content: space-between;
+}
+
+.search-sidebar-open {
+  background: var(--light-green);
+  border-radius: 1.2rem;
+}
+
+.sidebar-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.8rem;
+
+  height: 35rem;
+}
+
+input {
+  background: var(--light-green);
+  border: none;
+  border-radius: 1.2rem;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  height: 100%;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+/*USER - OPEN - SETTINGS*/
+.user-open {
+  background: var(--light-green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 6rem;
+  width: 100%;
+}
+
+.wrapper-use-open {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 5.5rem;
+  width: 90%;
+}
+
+.photo-use-open {
+  background: url(../../assets/image/photo.jpg) center / cover no-repeat;
+  border-radius: 1.2rem;
+  margin-right: 0.6rem;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+/*USER - OPEN - SETTINGS */
+
+/*SIDEBAR - CLOSE*/
+
+.container-sidebar-close {
+  animation: container-sidebar-slide-left 0.4s;
+  background: var(--green);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 7.8rem;
+  height: 100%;
+}
+
+.container-sidebar-close nav {
+  width: 100%;
+  height: 100%;
+}
+
+.ul-sidebar-close {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  list-style: none;
+  height: 100%;
+  width: 7.5rem;
+}
+
+.container-sidebar-close li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  height: 5rem;
+  width: 90%;
+}
+
+.container-sidebar-close li:nth-child(1) {
+  animation: container-sidebar-slide-left 0.3s;
+  justify-content: none;
+}
+
+.search-sidebar-close {
+  border-radius: 12px;
+  padding: 0;
+  width: 5rem;
+}
+
+#search-sidebar-close-id {
+  animation: container-sidebar-slide-left 0.4s;
+  background: var(--light-green);
+  border-radius: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 5rem;
+}
+
+.wrapper-search-sidebar-close {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar-close {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 1.8rem;
+  height: 35rem;
+}
+
+.item-descricao {
+  animation: opacity-description-open 0.5s;
+  color: var(--text-color);
+
+  opacity: 1;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.user-close {
+  background: var(--light-green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 6rem;
+  width: 100%;
+}
+
+/*ANIMATION*/
+
+#btn-sidebar-open {
+  animation: none;
+}
+
+#btn-sidebar-close {
+  animation: go-back-btn-sidebar-close 0.4s;
+}
+
+@keyframes go-back-btn-sidebar-close {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes container-sidebar-slide-right {
+  0% {
+    width: 75px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+
+@keyframes container-sidebar-slide-left {
+  0% {
+    width: 250px;
+  }
+  100% {
+    width: 75px;
+  }
+}
+
+@keyframes opacity-description-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
